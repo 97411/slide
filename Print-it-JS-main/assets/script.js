@@ -55,7 +55,7 @@ createDots();
 
 
 function updateSlide(index, dot) {
-    // Mettre à jour l'image
+    // Met à jour l'image
     bannerImg.src = `./assets/images/slideshow/${slides[index].image}`;
     // Mettre à jour le texte
     bannerImg.nextElementSibling.innerHTML = slides[index].tagLine;
@@ -72,18 +72,18 @@ function updateSlide(index, dot) {
 
 // Fonction pour gérer le clic sur la flèche droite
 arrowRight.addEventListener('click', function() {
-    // Mettez à jour l'index de la slide
+    // Met à jour l'index de la slide
     currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-    // Mettez à jour l'affichage de la slide
+    // Met à jour l'affichage de la slide
     updateSlide(currentSlideIndex);
 
 });
 
 // Fonction pour gérer le clic sur la flèche gauche
 arrowLeft.addEventListener('click', function() {
-    // Mettez à jour l'index de la slide
+    // Met à jour l'index de la slide
     currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
-    // Mettez à jour l'affichage de la slide
+    // Met à jour l'affichage de la slide
     updateSlide(currentSlideIndex);
 });
 
